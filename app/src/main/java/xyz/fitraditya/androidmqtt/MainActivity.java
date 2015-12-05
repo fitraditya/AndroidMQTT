@@ -26,15 +26,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String sHostname, sTopic, sUsername, sPassword, sPort;
         final EditText vHostname, vTopic, vUsername, vPassword, vPort;
-
         vHostname	= (EditText) findViewById(R.id.mHost);
         vPort		= (EditText) findViewById(R.id.mPort);
         vUsername	= (EditText) findViewById(R.id.mUsername);
         vPassword	= (EditText) findViewById(R.id.mPassword);
         vTopic		= (EditText) findViewById(R.id.mTopic);
 
+        String sHostname, sTopic, sUsername, sPassword, sPort;
         sHostname	= sharedPref.getString(HOSTNAME, "");
         sTopic		= sharedPref.getString(TOPIC,"");
         sUsername	= sharedPref.getString(USERNAME, "");
